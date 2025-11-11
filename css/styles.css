@@ -124,3 +124,91 @@ header a{
     grid-template-columns: repeat(3, 1fr);
     gap:40px;
 }
+
+
+/* ...existing code... */
+/* Estil del botó del header (reutilitzat per seccions) */
+header .menu button,
+/* .link .link-box button will reuse these rules (link rules are moved further below) */
+.link .link-box button {
+	padding: 10px 16px;
+	border-radius: 8px;
+	border: 0;
+	background: var(--black);
+	color: var(--white);
+	font-family: Inter, sans-serif;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+/* Ajust responsive bàsic per a contenidors */
+.container{
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Hero layout: two horizontal columns */
+.hero .hero-container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	padding: 60px 0;
+}
+
+.hero-left{
+	flex: 1 1 55%;
+}
+
+.hero-right{
+	flex: 0 0 40%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.image-hero{
+	max-width: 100%;
+	height: auto;
+	margin-right: 30px; /* as requested */
+}
+
+/* bi-nero: make title bold/dark */
+.bi-nero{
+	color: var(--dark-gray);
+	font-weight: 900;
+}
+
+/* Buttons used in hero — matches link/header button styling */
+.btn{
+	padding: 10px 16px;
+	border-radius: 8px;
+	border: 0;
+	background: var(--black);
+	color: var(--white);
+	font-family: Inter, sans-serif;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.hero-buttons{
+	margin-top: 20px;
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.btn-store{
+	/* semantic hook for store buttons */
+	display: inline-flex;
+	align-items: center;
+}
+
+/* store icons inside buttons */
+.btn-store img{
+	height: 18px;
+	width: auto;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+/* ...existing code... */
