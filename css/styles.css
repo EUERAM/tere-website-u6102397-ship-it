@@ -61,6 +61,18 @@
 	text-transform: uppercase;
     text-align:center;
 }
+
+/* Make .benefits title match the How Tere Works title */
+.benefits .section-title{
+	font-size: 47px;
+	font-family: Inter;
+	font-weight: 900;
+	line-height: 50.35px;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.black{ color: var(--dark-gray); }
 .section-subtitle {
 	font-size: 22px;
 	font-family: Inter;
@@ -207,6 +219,20 @@ header a{
 	width: 220px;
 	height: auto;
 	display: block;
+}
+
+/* Highlight style for BENEFITS word */
+.benefits-title{
+	text-align: center;
+	font-size: 56px;
+	font-weight: 900;
+	margin-bottom: 36px;
+}
+.benefits-highlight{
+	background: var(--green);
+	color: #fff;
+	padding: 6px 12px;
+	border-radius: 6px;
 }
 
 
