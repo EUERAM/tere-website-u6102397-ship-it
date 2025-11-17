@@ -37,9 +37,11 @@
     color: var(--light-gray);
 }
 .how-it-works .description-hero{
-    text-align:center;
-    width:620px;
-    margin:auto;
+	text-align:center;
+	width:520px;
+	margin:auto;
+	font-size: 16px;
+	line-height: 22px;
 }
 .button {
 	font-size: 24px;
@@ -120,9 +122,91 @@ header a{
 
 /* Secció How Tere works */
 .how-it-works .row{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:40px;
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap:80px; /* increased gap so the middle image sits further from the text */
+}
+
+/* Circular badge for step numbers */
+.step-number{
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: var(--green);
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 800;
+	font-size: 18px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+	margin-bottom: 12px;
+}
+
+/* Positioning: ensure the step block keeps its layout */
+.step{
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+/* Make the middle works image center and scale nicely */
+.works-img{
+	display:block;
+	margin: 0 auto; /* center horizontally */
+	max-width: 100%;
+	height: auto;
+}
+
+/* Benefits section */
+.benefits{
+	padding: 80px 0;
+	background: var(--background);
+}
+.benefits .section-title{
+	text-align: left;
+	margin-bottom: 40px;
+}
+.benefit-list{
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.benefit-card{
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.benefit-card.left-shift{
+	margin-left: -40px; /* shift the first card to the left */
+	width: calc(100% + 40px);
+}
+.benefit-content{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.benefit-number{
+	font-size: 48px;
+	font-weight: 900;
+	color: var(--dark-gray);
+}
+.benefit-title{
+	font-size: 20px;
+	margin: 0 0 6px 0;
+}
+.benefit-sub{
+	margin: 0;
+	color: var(--gray);
+}
+.benefit-image img{
+	width: 220px;
+	height: auto;
+	display: block;
 }
 
 
@@ -152,7 +236,7 @@ header .menu button,
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 30px;
+	gap: 60px; /* increased gap to separate image from text */
 	padding: 60px 0;
 }
 
@@ -169,7 +253,8 @@ header .menu button,
 .image-hero{
 	max-width: 100%;
 	height: auto;
-	margin-right: 30px; /* as requested */
+	margin-right: 0;
+	margin-left: 40px; /* add left margin so image sits further from the text */
 }
 
 /* bi-nero: make title bold/dark */
@@ -211,5 +296,169 @@ header .menu button,
 	margin-right: 8px;
 }
 
+/* Relocated styles for the .link section (ensure green container appears) */
+.link .link-box {
+	background: var(--green);
+	border-radius: 10px;
 	padding: 20px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.link .link-box .description-hero {
+	color: var(--white);
+	margin: 0;
+	/* make the text occupy less space in the link box */
+	flex: 0 0 auto;
+	max-width: 520px;
+	font-size: 18px;
+	line-height: 26px;
+}
+
+.link .link-actions {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	/* make the right side area wider so the input and button can be long */
+	min-width: 640px;
+}
+
+.link .link-input {
+	padding: 10px 12px;
+	border-radius: 8px;
+	border: 0;
+	outline: none;
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	/* make input wider than the Help Center button while keeping the same overall area */
+	flex: 2 1 0%; /* input takes twice the space of the button */
+	min-width: 0;
+}
+
+.link .link-box .link-cta {
+	/* Help Center button now smaller than input: flex 1 */
+	flex: 1 1 0%;
+	min-width: 0;
+	text-align: center;
+}
+
 /* ...existing code... */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+h1 span {
+    color: #69b46e;
+    font-weight: 700;
+}
+
+/* Benefit Box */
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px #e5e5e5;
+}
+
+.box img {
+    width: 200px;
+}
+
+.box .text {
+    max-width: 60%;
+}
+
+.number {
+    font-size: 40px;
+    color: #7ccf7a;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.desc {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    background: #fff;
+    padding: 40px 20px;
+    border-top: 3px solid #e5e5e5;
+}
+
+footer .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    color: #9f9f9f;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box img {
+        margin-top: 20px;
+    }
+
+    .text {
+        max-width: 100%;
+    }
+}
